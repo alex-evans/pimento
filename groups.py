@@ -1,0 +1,91 @@
+
+class Groups:
+
+    def __init__(self):
+        self.group_a = (
+            "Dustin Johnson",
+            "Justin Thomas",
+            "Jon Rahm",
+            "Jordan Spieth",
+            "Justin Rose",
+            "Hideki Matsuyama",
+            "Rory McIlroy",
+            "Rickie Fowler",
+            "Sergio Garcia",
+            "Brooks Koepka",
+            "Tommy Fleetwood",
+            "Jason Day",
+            "Paul Casey",
+            "Alex Noren",
+            "Henrik Stenson",
+            "Marc Leishman",
+            "Tyrrell Hatton",
+            "Phil Mickelson",
+            "Pat Perez",
+            "Matt Kuchar",
+            "Bubba Watson",
+            "Rafael Cabrera Bello",
+            "Brian Harman",
+            "Patrick Reed",
+            "Kevin Kisner",
+            "Tiger Woods"
+        )
+
+        self.group_b = (
+            "Francesco Molinari",
+            "Charley Hoffman",
+            "Kiradech Aphibarnrat",
+            "Gary Woodland",
+            "Branden Grace",
+            "Louis Oosthuizen",
+            "Patrick Cantlay",
+            "Tony Finau",
+            "Ross Fisher",
+            "Matthew Fitzpatrick",
+            "Daniel Berger",
+            "Kevin Chappell",
+            "Brendan Steele",
+            "Webb Simpson",
+            "Li Haotong",
+            "Adam Hadwin",
+            "Kyle Stanley",
+            "Cameron Smith",
+            "Thomas Pieters",
+            "Satoshi Kodaira",
+            "Dylan Frittelli",
+            "Chez Reavie",
+            "Jason Dufner",
+            "Siwoo Kim",
+            "Ian Poulter",
+            "Xander Schauffele"
+        )
+
+        self.group_c = (
+            "Jhonattan Vegas",
+            "Patton Kizzire",
+            "Yuta Ikeda",
+            "Bernd Wiesberger",
+            "Russell Henley",
+            "Yusaku Miyazato",
+            "Charl Schwartzel",
+            "Zach Johnson",
+            "Charles Howell III",
+            "Adam Scott",
+            "Peter Uihlein",
+            "James Hahn",
+            "Bryson DeChambeau",
+            "Alexander Levy",
+            "Ryan Moore",
+            "Luke List",
+            "Shubhankar Sharma",
+            "Kevin Na",
+            "Keegan Bradley",
+            "Joost Luiten",
+            "Julian Suri",
+            "Chesson Hadley",
+            "Bill Haas",
+            "Emiliano Grillo",
+            "Brandt Snedeker"
+        )
+
+        self.group_d = []
