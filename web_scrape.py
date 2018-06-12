@@ -2,7 +2,8 @@ from bs4 import BeautifulSoup
 import requests
 from groups import *
 
-url = "http://www.espn.com/golf/leaderboard"
+# url = "http://www.espn.com/golf/leaderboard"
+url = "http://www.espn.com/golf/leaderboard?tournamentId=401025255"
 
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')

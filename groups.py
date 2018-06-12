@@ -57,7 +57,8 @@ class Groups:
             "Jason Dufner",
             "Siwoo Kim",
             "Ian Poulter",
-            "Xander Schauffele"
+            "Xander Schauffele",
+            "Bryson DeChambeau"
         )
 
         self.group_c = (
@@ -73,7 +74,6 @@ class Groups:
             "Adam Scott",
             "Peter Uihlein",
             "James Hahn",
-            "Bryson DeChambeau",
             "Alexander Levy",
             "Ryan Moore",
             "Luke List",
