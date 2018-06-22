@@ -2,37 +2,51 @@ from bs4 import BeautifulSoup
 import requests
 from groups import *
 
-# url = "http://www.espn.com/golf/leaderboard"
-url = "http://www.espn.com/golf/leaderboard?tournamentId=401025255"
+class Event:
 
-response = requests.get(url)
-soup = BeautifulSoup(response.text, 'html.parser')
+    def __init__(self): 
 
-field = soup.find_all('a', {'class':'full-name'})
-players = [name.get_text() for name in field]
+        # url = "http://www.espn.com/golf/leaderboard"
+        # url = "http://www.espn.com/golf/leaderboard?tournamentId=401025255"
+        url = "http://travelerschampionship.com/travelers-championship-announces-2018-player-field/"
 
-g = Groups()
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
 
-event_group_a = []
-event_group_b = []
-event_group_c = []
-event_group_d = []
+        # field = soup.find_all('a', {'class':'full-name'})
+        field = soup.find_all('td')
+        players = [name.get_text().replace(" ","") for name in field]
 
-for player in players:
-    if player in g.group_a:
-        event_group_a.append(player)
-    elif player in g.group_b:
-        event_group_b.append(player)
-    elif player in g.group_c:
-        event_group_c.append(player)
-    else:
-        event_group_d.append(player)
 
-print("Group A")
-print(event_group_a)
-print("Group B")
-print(event_group_b)
-print("Group C")
-print(event_group_c)
-print("Group D")
-print(event_group_d)
+        g = Groups()
+
+        self.event_group_a = []
+        self.event_group_b = []
+        self.event_group_c = []
+        self.event_group_d = []
+
+        for player in players:
+            player_array = player.split(",")
+            player_name = player_array[1] + " " + player_array[0]
+            if player_name in g.group_a:
+                self.event_group_a.append(player_name)
+            elif player_name in g.group_b:
+                self.event_group_b.append(player_name)
+            elif player_name in g.group_c:
+                self.event_group_c.append(player_name)
+            else:
+                self.event_group_d.append(player_name)
+
+
+if __name__=='__main__':
+
+    event = Event()
+
+    print("Group A")
+    print(event.event_group_a)
+    print("Group B")
+    print(event.event_group_b)
+    print("Group C")
+    print(event.event_group_c)
+    print("Group D")
+    print(event.event_group_d)
