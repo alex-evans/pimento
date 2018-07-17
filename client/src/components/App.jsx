@@ -1,14 +1,16 @@
 import React from 'react'
-import EventGroupings from './EventGroupings'
-import Header from './presentational/Header'
+import Event from './home/Event'
+import Header from './home/Header'
 
-export default class App extends React.Component {
+class App extends React.Component {
   render() {
     return (
       <div>
         <Header />
-        <EventGroupings />
+        <Event />
       </div>
     )
   }
 }
+
+export default App
