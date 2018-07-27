@@ -6,11 +6,10 @@ class Event:
 
     def __init__(self): 
 
-        # url = "http://www.espn.com/golf/leaderboard"
+        url = "http://www.espn.com/golf/leaderboard"
         # url = "http://www.espn.com/golf/leaderboard?tournamentId=401025255"
         # url = "http://travelerschampionship.com/travelers-championship-announces-2018-player-field/"
-        url = "http://www.espn.com/golf/leaderboard?tournamentId=401025259"
-
+        
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
 
@@ -51,3 +50,4 @@ if __name__=='__main__':
     print(event.event_group_c)
     print("Group D")
     print(event.event_group_d)
+    
